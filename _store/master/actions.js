@@ -9,7 +9,7 @@ export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}
     //Instance response
     let translations = {en: {}, es: {}}
     rootGetters['qsiteApp/getSelectedLocalesSelect'].forEach(item => {
-      translations[item.value] = {}
+      translations[item?.value || 'es'] = {}
     })
 
     //Request Params
